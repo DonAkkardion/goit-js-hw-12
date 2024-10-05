@@ -10,15 +10,16 @@ const loadMoreBtn = document.querySelector('.load-more');
 const loadingText = document.querySelector('.loading-text');
 const gallery = document.querySelector('.gallery');
 
-let searchTerm = '';
 let currentPage = 1;
+let searchTerm = '';
 
 form.addEventListener('submit', handleSubmit);
 loadMoreBtn.addEventListener('click', handleLoad);
 
 async function handleSubmit(event) {
   event.preventDefault();
-  const searchTerm = userInput.value.trim();
+
+  searchTerm = userInput.value.trim();
 
   if (searchTerm === '') {
     iziToast.error({
@@ -100,9 +101,10 @@ async function handleSearch(term, page) {
 }
 
 function gallerySmoothScroll() {
-  const galleryHeight = gallery.getBoundingClientRect().height;
+  const card = document.querySelector('.gallery-item');
+  const cardHeight = card.getBoundingClientRect().height;
   window.scrollBy({
-    top: galleryHeight,
+    top: cardHeight * 2,
     behavior: 'smooth',
   });
 }
