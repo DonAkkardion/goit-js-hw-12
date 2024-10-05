@@ -189,9 +189,6 @@ section {
   border-radius: 50%;
   display: none;
   margin-top: 32px;
-  /* position: relative;
-  left: 50%; */
-  /* top: 60px; */
   background: linear-gradient(0deg, rgba(255, 61, 0, 0.2) 33%, #ff3d00 100%);
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
