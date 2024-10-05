@@ -158,6 +158,7 @@ section {
 }
 .load-more {
   border-radius: 8px;
+  margin-top: 32px;
   margin-bottom: 20px;
   width: 125px;
   height: 40px;
